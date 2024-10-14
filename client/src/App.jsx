@@ -1,19 +1,14 @@
-// src/App.js
-import { useContext } from 'react';
-import { Button, Typography } from '@mui/material';
-import { ColorModeContext } from './config/themeContext';
+import { Container } from "@mui/material"
+import PrimarySearchAppBar from "./components/PrimarySearchAppBar"
 
-function App() {
-  const colorMode = useContext(ColorModeContext);
 
+
+const App = () => {
   return (
-    <div style={{ padding: '16px' }}>
-      <Typography variant="h1" color="primary">Hello World!</Typography>
-      <Button variant="contained" color="secondary" onClick={colorMode.toggleColorMode}>
-        Toggle Theme
-      </Button>
-    </div>
-  );
+    <Container>
+      <PrimarySearchAppBar/>
+    </Container>
+  )
 }
 
-export default App;
+export default App
